@@ -1,0 +1,17 @@
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\FirstWinForm.exe
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\res\cookie.png
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\FirstWinForm.deps.json
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\FirstWinForm.runtimeconfig.json
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\FirstWinForm.dll
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\bin\Debug\net8.0-windows\FirstWinForm.pdb
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.DatabaseView.resources
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.csproj.GenerateResource.cache
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.AssemblyInfoInputs.cache
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.AssemblyInfo.cs
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.csproj.CoreCompileInputs.cache
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.dll
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\refint\FirstWinForm.dll
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.pdb
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\FirstWinForm.genruntimeconfig.cache
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\FirstWinForm\obj\Debug\net8.0-windows\ref\FirstWinForm.dll
