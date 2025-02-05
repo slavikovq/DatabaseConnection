@@ -73,4 +73,54 @@ public class DBDriver
             ThrownException = ex;
         }
     }
+
+    public void RemoveUser(string ID)
+    {
+        MySqlConnection connection = GetConnection();
+        try
+        {   
+            connection.Open();
+            string query = "DELETE FROM users WHERE ID=@ID";
+            var cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@ID", ID);
+            cmd.ExecuteNonQuery();
+            
+        }
+        catch (MySqlException ex)
+        {
+            ThrownException = ex;
+        }
+    }
+    
+    public List<User> GetSpecificUser(string username)
+    {
+        List<User> users = new List<User>();
+        MySqlConnection connection = GetConnection();
+        try
+        {
+            connection.Open();
+            string query = "SELECT * FROM users WHERE user_name LIKE @username";
+            var cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@username", "%"+ username + "%");
+            
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var user = new User();
+                user.Id = reader.GetInt32(0);
+                user.Username = reader.GetString(1);
+                user.CreatedAt = reader.GetDateTime(2);
+                user.ModifiedAt = reader.GetDateTime(3);
+                users.Add(user);
+            }
+        }
+        catch (MySqlException ex)
+        {
+            ThrownException = ex;
+        }
+        
+        return users;
+    }
+    
+    
 }

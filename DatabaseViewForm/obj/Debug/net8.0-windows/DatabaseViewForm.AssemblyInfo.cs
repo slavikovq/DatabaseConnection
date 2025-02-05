@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseViewForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb7aa8e2596b707a1f70ccb5f7d29cac7ec84bf4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseViewForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseViewForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

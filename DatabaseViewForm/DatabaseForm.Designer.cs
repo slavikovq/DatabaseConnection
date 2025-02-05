@@ -41,14 +41,16 @@ partial class DatabaseForm
         AddUserTB = new System.Windows.Forms.TextBox();
         RemoveUser = new System.Windows.Forms.Button();
         RemoveUserTB = new System.Windows.Forms.TextBox();
+        SearchBox = new System.Windows.Forms.TextBox();
         SuspendLayout();
         // 
         // UserListView
         // 
+        UserListView.BackColor = System.Drawing.Color.FromArgb(((int)((byte)192)), ((int)((byte)192)), ((int)((byte)255)));
         UserListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { idCol, usernameCol, createdDateCol, modifiedDateCol });
-        UserListView.Location = new System.Drawing.Point(68, 71);
+        UserListView.Location = new System.Drawing.Point(69, 71);
         UserListView.Name = "UserListView";
-        UserListView.Size = new System.Drawing.Size(525, 169);
+        UserListView.Size = new System.Drawing.Size(719, 169);
         UserListView.TabIndex = 0;
         UserListView.UseCompatibleStateImageBehavior = false;
         UserListView.View = System.Windows.Forms.View.Details;
@@ -57,29 +59,30 @@ partial class DatabaseForm
         // 
         idCol.Name = "idCol";
         idCol.Text = "Id";
-        idCol.Width = 100;
+        idCol.Width = 43;
         // 
         // usernameCol
         // 
         usernameCol.Name = "usernameCol";
         usernameCol.Text = "Username";
-        usernameCol.Width = 86;
+        usernameCol.Width = 276;
         // 
         // createdDateCol
         // 
         createdDateCol.Name = "createdDateCol";
         createdDateCol.Text = "Created";
-        createdDateCol.Width = 117;
+        createdDateCol.Width = 226;
         // 
         // modifiedDateCol
         // 
         modifiedDateCol.Name = "modifiedDateCol";
         modifiedDateCol.Text = "Modified";
-        modifiedDateCol.Width = 162;
+        modifiedDateCol.Width = 413;
         // 
         // PasswordTextBox
         // 
-        PasswordTextBox.Location = new System.Drawing.Point(306, 286);
+        PasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)((byte)255)), ((int)((byte)192)), ((int)((byte)255)));
+        PasswordTextBox.Location = new System.Drawing.Point(68, 246);
         PasswordTextBox.Name = "PasswordTextBox";
         PasswordTextBox.Size = new System.Drawing.Size(287, 23);
         PasswordTextBox.TabIndex = 1;
@@ -89,7 +92,7 @@ partial class DatabaseForm
         // 
         // FetchButton
         // 
-        FetchButton.Location = new System.Drawing.Point(609, 286);
+        FetchButton.Location = new System.Drawing.Point(68, 275);
         FetchButton.Name = "FetchButton";
         FetchButton.Size = new System.Drawing.Size(123, 26);
         FetchButton.TabIndex = 2;
@@ -108,7 +111,7 @@ partial class DatabaseForm
         // 
         // AddUser
         // 
-        AddUser.Location = new System.Drawing.Point(624, 68);
+        AddUser.Location = new System.Drawing.Point(68, 246);
         AddUser.Name = "AddUser";
         AddUser.Size = new System.Drawing.Size(108, 23);
         AddUser.TabIndex = 5;
@@ -119,35 +122,50 @@ partial class DatabaseForm
         // 
         // AddUserTB
         // 
-        AddUserTB.Location = new System.Drawing.Point(624, 97);
+        AddUserTB.BackColor = System.Drawing.Color.FromArgb(((int)((byte)255)), ((int)((byte)192)), ((int)((byte)255)));
+        AddUserTB.Location = new System.Drawing.Point(69, 278);
         AddUserTB.Name = "AddUserTB";
-        AddUserTB.Size = new System.Drawing.Size(162, 23);
+        AddUserTB.Size = new System.Drawing.Size(286, 23);
         AddUserTB.TabIndex = 6;
         AddUserTB.Visible = false;
+        AddUserTB.KeyPress += AddUserTB_KeyPress;
         // 
         // RemoveUser
         // 
-        RemoveUser.Location = new System.Drawing.Point(624, 146);
+        RemoveUser.Location = new System.Drawing.Point(69, 313);
         RemoveUser.Name = "RemoveUser";
         RemoveUser.Size = new System.Drawing.Size(116, 23);
         RemoveUser.TabIndex = 7;
         RemoveUser.Text = "Remove user by ID";
         RemoveUser.UseVisualStyleBackColor = true;
         RemoveUser.Visible = false;
+        RemoveUser.Click += RemoveUser_Click;
         // 
         // RemoveUserTB
         // 
-        RemoveUserTB.Location = new System.Drawing.Point(624, 175);
+        RemoveUserTB.BackColor = System.Drawing.Color.FromArgb(((int)((byte)255)), ((int)((byte)192)), ((int)((byte)255)));
+        RemoveUserTB.Location = new System.Drawing.Point(69, 342);
         RemoveUserTB.Name = "RemoveUserTB";
-        RemoveUserTB.Size = new System.Drawing.Size(162, 23);
+        RemoveUserTB.Size = new System.Drawing.Size(286, 23);
         RemoveUserTB.TabIndex = 8;
         RemoveUserTB.Visible = false;
+        RemoveUserTB.KeyPress += RemoveUserTB_KeyPress;
+        // 
+        // SearchBox
+        // 
+        SearchBox.Location = new System.Drawing.Point(69, 42);
+        SearchBox.Name = "SearchBox";
+        SearchBox.PlaceholderText = "Search";
+        SearchBox.Size = new System.Drawing.Size(524, 23);
+        SearchBox.TabIndex = 9;
+        SearchBox.KeyUp += SearchBox_KeyUp;
         // 
         // DatabaseForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(800, 450);
+        Controls.Add(SearchBox);
         Controls.Add(RemoveUserTB);
         Controls.Add(RemoveUser);
         Controls.Add(AddUserTB);
@@ -160,6 +178,8 @@ partial class DatabaseForm
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.TextBox SearchBox;
 
     private System.Windows.Forms.Button RemoveUser;
     private System.Windows.Forms.TextBox RemoveUserTB;

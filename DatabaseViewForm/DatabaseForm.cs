@@ -103,7 +103,70 @@ public partial class DatabaseForm : Form
 
     private void AddUser_Click(object sender, EventArgs e)
     {
+        if (AddUserTB.Text == null)
+        {
+            
+        }
         _dbDriver.InsertUser(AddUserTB.Text.ToString());
         LoadUsers();
+        AddUserTB.Text = "";
+    }
+
+    private void RemoveUserFunction(string input)
+    {
+        
+        string[] ids = input.Split(',').ToArray();
+
+        if (!ids.All(id => int.TryParse(id, out _)))
+        {
+            return;
+        }
+        foreach (string id in ids)
+        {
+            _dbDriver.RemoveUser(id);    
+        }
+    }
+    
+    private void RemoveUser_Click(object sender, EventArgs e)
+    {
+        RemoveUserFunction(RemoveUserTB.Text);
+        LoadUsers();
+        RemoveUserTB.Text = "";
+    }
+
+    private void AddUserTB_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (e.KeyChar == (int)Keys.Enter)
+        { 
+            _dbDriver.InsertUser(AddUserTB.Text.ToString());
+            LoadUsers();
+            AddUserTB.Text = "";
+        }
+    }
+
+
+    private void RemoveUserTB_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (e.KeyChar == (int)Keys.Enter)
+        { 
+            RemoveUserFunction(RemoveUserTB.Text);
+            LoadUsers();
+            RemoveUserTB.Text = "";
+        }
+    }
+
+    private void SearchBox_KeyUp(object sender, KeyEventArgs e)
+    {
+        List<User> users = _dbDriver.GetSpecificUser(SearchBox.Text);
+        if (_dbDriver.ThrownException is not null)
+        {
+            ErrorLabel.Text = _dbDriver.ThrownException.Message;
+            _dbDriver.ThrownException = null;
+            _dbDriver = null;
+        }
+        else
+        {
+            PopulateListView(users);
+        }
     }
 }

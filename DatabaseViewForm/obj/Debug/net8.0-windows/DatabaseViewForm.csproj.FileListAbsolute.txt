@@ -17,3 +17,4 @@ C:\Users\barbora.slavikova\Desktop\DatabaseConnection\DatabaseViewForm\obj\Debug
 C:\Users\barbora.slavikova\Desktop\DatabaseConnection\DatabaseViewForm\obj\Debug\net8.0-windows\DatabaseViewForm.pdb
 C:\Users\barbora.slavikova\Desktop\DatabaseConnection\DatabaseViewForm\obj\Debug\net8.0-windows\DatabaseViewForm.genruntimeconfig.cache
 C:\Users\barbora.slavikova\Desktop\DatabaseConnection\DatabaseViewForm\obj\Debug\net8.0-windows\ref\DatabaseViewForm.dll
+C:\Users\barbora.slavikova\Desktop\DatabaseConnection\DatabaseViewForm\obj\Debug\net8.0-windows\DatabaseViewForm.sourcelink.json
